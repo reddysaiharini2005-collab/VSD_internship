@@ -1,0 +1,7 @@
+Tools:
+
+RISC-V compiler: riscv64-unknown-elf-gcc
+
+RISC-V simulator: spike
+
+Verilog simulation: iverilog & gtkwave

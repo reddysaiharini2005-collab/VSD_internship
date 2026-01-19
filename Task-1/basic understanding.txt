@@ -1,0 +1,11 @@
+Q1: Where do we keep RISC-V programs? 
+A: They’re in the samples/ folder. That’s where all the example programs live, so we can test the CPU and try out different instructions.
+
+Q2: How do we turn C code into something the RISC-V CPU can run, and how does it get executed? 
+A: The C code is compiled into machine code—the binary instructions the CPU understands. Loading means putting this binary into memory so the CPU knows where to fetch instructions. Spike and the proxy kernel make the CPU think it’s running on real hardware.
+
+Q3: How does the CPU read/write memory and interact with peripherals? 
+A: Normal memory stores data and instructions. Memory-mapped I/O assigns special memory addresses to hardware like timers or UARTs. When the CPU reads/writes there, it’s actually talking to those devices.
+
+Q4: Where does a new FPGA hardware block fit in the system? 
+A: An FPGA IP block is like any other hardware. It goes on the memory I/O bus so the CPU can read/write to it, just like other peripherals.
